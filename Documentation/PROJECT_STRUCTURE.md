@@ -2,9 +2,12 @@
 
 <!-- START_STRUCTURE -->
 ```
+├── 404.html
 ├── Documentation/
 │   ├── CONTRIBUTION.md
 │   ├── PROJECT_STRUCTURE.md
+│   ├── images/
+│   │   └── netlify.svg
 │   └── repo_structure.txt
 ├── LICENSE
 ├── README.md
@@ -28,21 +31,23 @@
 │   └── timeComplexity.html
 ├── resources/
 │   ├── algo.py
-│   ├── analyser-style.css
-│   ├── analyser.js
-│   ├── bfuscate-style.css
-│   ├── common_functions.js
-│   ├── contributorsSection.css
-│   ├── contributorsSection.js
-│   ├── error404.css
-│   ├── error404.js
-│   ├── home-style.css
-│   ├── homeScript.js
-│   ├── navbar.js
-│   ├── obfuscate-script.js
-│   ├── obfuscate-style.css
-│   ├── refine.js
-│   └── style.css
+│   ├── scripts/
+│   │   ├── analyser.js
+│   │   ├── common_functions.js
+│   │   ├── contributorsSection.js
+│   │   ├── error404.js
+│   │   ├── homeScript.js
+│   │   ├── navbar.js
+│   │   ├── obfuscate-script.js
+│   │   └── refine.js
+│   └── styles/
+│       ├── analyser-style.css
+│       ├── bfuscate-style.css
+│       ├── contributorsSection.css
+│       ├── error404.css
+│       ├── home-style.css
+│       ├── obfuscate-style.css
+│       └── style.css
 ├── robots.txt
 └── sitemap.xml
 ```

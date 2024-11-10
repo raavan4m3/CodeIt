@@ -26,8 +26,8 @@
   <meta name="twitter:description" content="Refine, obfuscate, and analyze your code with CodeIt to optimize development processes." />
 <!--   <meta name="twitter:image" content="images/Nomenclature.png" />  -->
 
-  <link rel="stylesheet" href="resources/home-style.css" />
-  <link rel="stylesheet" href="resources/style.css" />
+  <link rel="stylesheet" href="resources/styles/home-style.css" />
+  <link rel="stylesheet" href="resources/styles/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -44,10 +44,6 @@
 
   <script src="https://unpkg.com/scrollreveal"></script>
 
-
-
- 
-
 </head>
 
 <body id="body">
@@ -60,7 +56,7 @@
   <button type="button" class="theme" id="lightThemeBtn">
     <img src="./images/sun.png" class="themeLogo" />
   </button>
-
+  <div class="scrollBar" id="progress_bar"></div> <!--PROGRESS BAR-->
   <div class="top-elements">
     <a href="index.html" class="top-link"><img src="images/Nomenclature.png" alt="logo" class="logo" id="logo" />
       <p class="codeit">CodeIt</p>
@@ -134,10 +130,31 @@
         CodeIt makes coding easy, fast, and secure.
       </p>
       <br />
+      
       <p class="text">
+
         The adjoining map shows people who are using or contributing to
         CodeIt.
+
       </p>
+
+      <p class="text">
+        ㅤㅤㅤㅤ ㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+      </p>
+      
+      <p>
+        <div class="visitor-widget">
+          <!-- Custom text and visitor counter inline -->
+          <span>CodeIt Visitors:</span> <!-- Custom text -->
+          <div style="display: flex; margin-left: 160px; margin-top: -40px;">
+            <!-- Third-party visitor counter widget code -->
+            <a href="http://www.freevisitorcounters.com"></a>
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=aa47fc4cff3de97c11c73018e32312f0a900c2da"></script>
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1259658/t/5"></script>
+          </div>
+        </div>
+      </p>
+      
     </div>
 
     <div class="right reveal">
@@ -284,7 +301,7 @@
           <a class="subheading" href="index.html" style="margin: 0px;" id="last_link">CodeIt</a>
         </div>
         <h3 style="margin-top: 20px;text-align: center;">Our Social Media Handles</h3>
-        <div
+        <div class="icon-links"
           style="font-size: 35px;width: 200px; display: flex;gap: 40px;margin-top: 20px; justify-content: center;align-items: center;">
           <a href="https://github.com/multiverseweb/CodeIt"><i class="fa-brands fa-github"></i></a>
           <a href="404.html"><i class="fa-brands fa-discord"></i></a>
@@ -297,20 +314,20 @@
           <p>Let Us Know Your Thoughts!</p>
 
         <div class="form reveal">
-            <div class="user">
+            <div class="user inputclass">
             <i class="fa-solid fa-user"></i>
             <input type="text" name="Name" placeholder="Your Name" required />
             </div>
-            <div class="email">
+            <div class="email inputclass">
               <i class="fa-solid fa-envelope"></i>
             <input type="email" name="Email" placeholder="Your Email ID" required />
             </div>
-            <div class="feed-back">
+            <div class="feed-back inputclass">
             <i class="fa-solid fa-comment"></i>
   
-           <input name="Feedback" class="feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input>
-          <span id="feedbackError"style="color:#ff5457"display="none">Feedback must be at least 10 characters long.</span>  
-          </div>
+           <input name="Feedback" class="feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input></div>
+          <span id="feedbackError"style="color:#ff5457; white-space: normal; opacity: 0%; transition: opacity 0.4s ease " display="none">Feedback must be at least 10 characters long.</span>  
+        
 
           <div class="star-rating" style="text-align: center; margin: 10px;">
             <input type="radio" id="star5" name="rating" value="5" />
@@ -327,7 +344,7 @@
             <button type="submit" id="send">Send</button>
         </div>
           </form>
-        </div>
+      </div>
 
   </footer>
 
@@ -395,26 +412,18 @@
       <img src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
 
     </div>
-    <script src="resources/homeScript.js"></script>
-    <script src="resources/common_functions.js"></script>
+    <script src="resources/scripts/homeScript.js"></script>
+    <script src="resources/scripts/common_functions.js"></script>
 
     <script>
-      function checkFeedbackLength(input) {
-        var errorSpan = document.getElementById('feedbackError');
-        if (input.value.length < 10) {
-          errorSpan.style.display = 'block';
-          input.setCustomValidity('Feedback must be at least 10 characters long.');
-        } else {
-          errorSpan.style.display = 'none';
-          input.setCustomValidity('');
-        }
-      }
+      // Detect changes the selection of the Feedback input field to show the feedback error accordingly
+      document.forms["CodeIt Reviews"]["Feedback"].addEventListener('blur', event => {
+          document.getElementById('feedbackError').style.opacity = '0%';
+      })
+      document.forms["CodeIt Reviews"]["Feedback"].addEventListener('focus', event => {
+        checkFeedbackLength(document.forms["CodeIt Reviews"]["Feedback"]);
+      })
       
-      function validateFeedback() {
-        var feedback = document.forms["CodeIt Reviews"]["Feedback"];
-        checkFeedbackLength(feedback);
-        return feedback.value.length >= 10;
-      }
       function validateForm() {
                 const rating = document.querySelector('input[name="rating"]:checked');
                 if (!rating) {
@@ -437,7 +446,7 @@
       defer>
       </script>
 
-<!-- Added this script to initialize elements you want to reveal.    -->
+<!-- Added this script to initialize elements to reveal.    -->
 
       <script>ScrollReveal().reveal('.reveal', {
         distance: '50px',
@@ -447,10 +456,6 @@
         interval: 200, // Delay between revealing multiple elements
       });
       </script>
-
-      
-
- 
 </body>
 
 </html>

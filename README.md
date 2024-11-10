@@ -56,8 +56,8 @@
 
 ### Table of Contents
 
-| [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use CodeIt](#use-codeit) | [Contribute](#contribute) |
-|:--:|:--:|:--:|:--:|:--:|:--:|
+| [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Repository Structure](#repository-structure) | [Contribute](#contribute) | [Use CodeIt](#use-codeit) |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 
 ## About
 CodeIt is a software solution tool designed to streamline and enhance the coding experience for developers. It addresses several common challenges faced when working with coding platforms, such as LeetCode, and offers a range of features to improve code management, security, and performance analysis.
@@ -116,16 +116,9 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
   - Increase Accuracy: Reduce the risk of errors that can occur during manual code adjustments.
   - Enhance Productivity: Speed up your coding process with streamlined workflows and intuitive tools.
 
-## ✨ Project Structure
+## Repository Structure
 
-Check the project structure here [Project Structure](/Documentation/PROJECT_STRUCTURE.md)
-
-## Use CodeIt
-Deployed on
-
-<img height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Netlify_logo_%282%29.svg/1200px-Netlify_logo_%282%29.svg.png">
-
-<a href="https://codeittool.netlify.app/">Visit Website</a>
+📂 [Repository Structure](/Documentation/PROJECT_STRUCTURE.md)
 
 ## Contribute
 **💬 Got ideas?**
@@ -162,6 +155,19 @@ Deployed on
 [![Forkers repo roster for @multiverseweb/CodeIt](https://reporoster.com/forks/dark/multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/network/members)
 
 
-<sup><a href="#codeit--tool" align="right">Back to top</a></sup>
+### Use CodeIt
+|<a href="https://codeittool.netlify.app/"><img src="Documentation/images/netlify.svg"></a>|[Visit CodeIt's Website](https://codeittool.netlify.app/)|
+|-|-|
+
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
+
+```
+
+```
+
 
 
